@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgThemeService } from 'projects/ng-theme/src/public-api';
+import { NgThemeService } from 'projects/ng-theme/src/lib/ng-theme.service';
 
 @Component({
   selector: 'app-test-bed',

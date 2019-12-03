@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgThemeService } from 'projects/ng-theme/src/public-api';
+import { NgThemeService } from 'projects/ng-theme/src/lib/ng-theme.service';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +13,6 @@ export class AppComponent {
   constructor(public theme: NgThemeService){
     console.log(this.theme.currentTheme);
     this.numbers = Array(100);
+    console.log(this.theme);
   }
 }

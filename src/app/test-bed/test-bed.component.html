@@ -11,7 +11,7 @@
   <h3 NgTheme>{{title}}</h3>
   <p><a NgTheme href="#">{{title}}</a></p>
   <p><i NgTheme>{{title}}</i></p>
-  <button NgTheme (click)="theme.toggleTheme('Light','Dark')">{{title}}</button>
+  <button NgTheme (click)="theme.nextTheme()">{{title}}</button>
   <p>
     <label NgTheme for="input">{{title}}</label>
     <input NgTheme id="input" type="text" value="Hello World" />
