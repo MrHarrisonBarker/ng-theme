@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+import { NgThemeService } from 'projects/ng-theme/src/public-api';
+
+@Component({
+  selector: 'app-test-bed',
+  templateUrl: './test-bed.component.html'
+})
+export class TestBedComponent implements OnInit {
+
+  title = 'ng-theme-workspace';
+
+  constructor(public theme: NgThemeService) { }
+
+  ngOnInit() {
+  }
+
+}

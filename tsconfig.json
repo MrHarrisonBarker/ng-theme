@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-theme": [
+        "dist/ng-theme"
+      ],
+      "ng-theme/*": [
+        "dist/ng-theme/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgThemeService } from 'projects/ng-theme/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-theme-workspace';
+  numbers;
+
+  constructor(public theme: NgThemeService){
+    console.log(this.theme.currentTheme);
+    this.numbers = Array(100);
+  }
 }

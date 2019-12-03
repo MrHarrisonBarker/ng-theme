@@ -1,0 +1,31 @@
+<div NgTheme="background-color:background">
+
+  <h1 [style.color]="theme.currentTheme.primaryText">{{title}}</h1>
+  <h3 [style.color]="theme.currentTheme.secondaryText">{{title}}</h3>
+  <p><a [style.color]="theme.currentTheme.linkText" href="#">{{title}}</a></p>
+  <i [style.color]="theme.currentTheme.secondaryText">{{title}}</i>
+
+  <hr NgTheme>
+
+  <h1 NgTheme="color:primaryText">{{title}}</h1>
+  <h3 NgTheme>{{title}}</h3>
+  <p><a NgTheme href="#">{{title}}</a></p>
+  <p><i NgTheme>{{title}}</i></p>
+  <button NgTheme (click)="theme.toggleTheme('Light','Dark')">{{title}}</button>
+  <p>
+    <label NgTheme for="input">{{title}}</label>
+    <input NgTheme id="input" type="text" value="Hello World" />
+  </p>
+
+  <ol NgTheme>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+
+  <ul NgTheme>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+</div>
