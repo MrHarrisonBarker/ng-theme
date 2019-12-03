@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TestBedComponent } from './test-bed/test-bed.component';
-import { NgThemeModule, NgThemeDirectiveModule } from 'projects/ng-theme/src/public-api';
+import { NgThemeModule, NgThemeDirectiveModule, NgThemeComponentsModule } from 'projects/ng-theme/src/public-api';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,10 @@ import { NgThemeModule, NgThemeDirectiveModule } from 'projects/ng-theme/src/pub
   imports: [
     BrowserModule,
     NgThemeModule.forRoot({
-      testConfig: 'this is injected from NgModule',
+      background: {
+        backgroundOn: true,
+        backgroundElement: 'body'
+      },
       themes: [{
         name: 'LightInjected',
         primary: '#FFFFFF',
@@ -50,7 +53,8 @@ import { NgThemeModule, NgThemeDirectiveModule } from 'projects/ng-theme/src/pub
         accent: '#E30B16'
       }]
     }),
-    NgThemeDirectiveModule
+    NgThemeDirectiveModule,
+    NgThemeComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

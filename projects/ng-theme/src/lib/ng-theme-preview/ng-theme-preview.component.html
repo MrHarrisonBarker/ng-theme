@@ -1,0 +1,15 @@
+<ul *ngIf="theme" NgTheme >
+    <li>
+        <div class="preview-row">
+            <div class="inline" >{{theme.name}}</div>
+        </div>
+    </li>
+    <ng-template *ngFor="let prop of theme | keys" ngIf="true">
+        <li *ngIf="isValid(prop)">
+            <div class="preview-row">
+                <div class="prop" >{{prop}} -> {{theme[ prop ]}}</div>
+                <div class="colour-preview" [style.background-color]="theme[ prop ]"></div>
+            </div>
+        </li>
+    </ng-template>
+</ul>

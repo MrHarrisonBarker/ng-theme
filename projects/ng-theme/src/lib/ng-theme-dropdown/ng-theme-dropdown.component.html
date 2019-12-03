@@ -1,0 +1,3 @@
+<select class="ng-theme-dropdown" (change)="set($event.target.value)" NgTheme>
+    <option *ngFor="let theme of themeService.themes" [value]="theme.name">{{theme.name}}</option>
+</select>   

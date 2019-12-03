@@ -1,1 +1,11 @@
-<app-test-bed *ngFor="let number of numbers"></app-test-bed>
+<div><ng-theme-dropdown></ng-theme-dropdown></div>
+
+<div><ng-theme-toggle></ng-theme-toggle></div>
+
+<div>
+    <ng-theme-preview [theme]="theme" *ngFor="let theme of theme.themes"></ng-theme-preview>
+</div>
+
+<div id="backgroundDiv">
+    <app-test-bed *ngFor="let number of numbers"></app-test-bed>
+</div>

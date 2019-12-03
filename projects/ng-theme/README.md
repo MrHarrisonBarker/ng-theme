@@ -1,24 +1,123 @@
-# NgTheme
+# ng-theme
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+![npm](https://img.shields.io/npm/dt/ng-theme) ![npm](https://img.shields.io/npm/v/ng-theme) ![GitHub issues](https://img.shields.io/github/issues/mrharrisonbarker/ng-theme) ![NPM](https://img.shields.io/npm/l/ng-theme) [![Build Status](https://travis-ci.com/MrHarrisonBarker/ng-theme.svg?branch=master)](https://travis-ci.com/MrHarrisonBarker/ng-time-from-pipe) 
 
-## Code scaffolding
+Angular theming libary.
 
-Run `ng generate component component-name --project ng-theme` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-theme`.
-> Note: Don't forget to add `--project ng-theme` or else it will be added to the default project in your `angular.json` file. 
+* Collection of defualt themes
+* Injectable custom themes
+* Auto theming based on HTML element
+* Toggle and dropdown components
+* Theme service and directive
 
-## Build
+### Install
 
-Run `ng build ng-theme` to build the project. The build artifacts will be stored in the `dist/` directory.
+ `npm install ng-time-from-pipe` 
 
-## Publishing
+#### ng-theme-service
 
-After building your library with `ng build ng-theme`, go to the dist folder `cd dist/ng-theme` and run `npm publish`.
+##### Varibles
 
-## Running unit tests
+| Attribute    | Description |
+| ------------ | ----------- |
+| currentTheme |             |
+| themes       |             |
 
-Run `ng test ng-theme` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##### Methods
 
-## Further help
+| Attribute   | Description |
+| ----------- | ----------- |
+| setTheme    |             |
+| toggleTheme |             |
+| listen      |             |
+| nextTheme   |             |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### ng-theme-directive
+
+##### inputs
+
+| Attribute | Description |
+| --------- | ----------- |
+| NgTheme   |             |
+
+#### ng-theme-preview
+
+##### inputs
+
+| Attribute | Description |
+| --------- | ----------- |
+| theme     |             |
+
+```html
+<ng-theme-preview [theme]="theme"></ng-theme-preview>
+```
+
+### Usage
+
+```typescript
+import { NgThemeModule, NgThemeDirectiveModule, NgThemeComponentsModule } from 'projects/ng-theme/src/public-api';
+```
+
+```typescript
+@NgModule( { 
+  declarations: [ ... ], 
+  imports: [ ..., NgThemeModule, NgThemeDirectiveModule, NgThemeComponentsModule, ... ]
+});
+```
+
+```typescript
+	imports: [ ..., NgThemeModule.forRoot({
+		background: {
+        backgroundOn: true,
+        backgroundElement: 'body'
+      },
+      themes: [{
+      	...
+      }, {
+      	...
+      }]
+	}), ... ]
+```
+
+### Theme
+
+```typescript
+export class Theme
+{
+	public name: string;
+
+	public primary: string;
+	public primaryText: string;
+
+	public secondary: string;
+	public secondaryText?: string;
+
+	public background: string;
+
+	public linkText: string;
+
+	public buttonText?: string;
+	public buttonBorder?: string;
+	public buttonBackground?: string;
+
+	public jumbo: string;
+  public jumboText: string;
+    
+ 	public hr: string;
+	
+	public shadow: string;
+
+	public isDark: boolean;
+	public accent: string;
+
+}
+```
+
+```html
+<ng-theme-dropdown></ng-theme-dropdown>
+```
+
+```html
+<ng-theme-toggle></ng-theme-toggle>
+```
+

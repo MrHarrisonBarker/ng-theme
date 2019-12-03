@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor(public theme: NgThemeService){
     console.log(this.theme.currentTheme);
-    this.numbers = Array(100);
+    this.numbers = Array(10);
     console.log(this.theme);
   }
 }

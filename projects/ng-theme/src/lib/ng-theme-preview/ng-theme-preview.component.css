@@ -1,0 +1,30 @@
+.colour-preview {
+    /* width: 70px; */
+    height: 20px;
+    border-radius: 1rem;
+    border: solid 1px black;
+
+    flex: 1;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+.preview-row {
+    display: flex;
+}
+
+/* .inline {
+    display: inline-block;
+} */
+
+ul {
+    list-style-type: none;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.prop {
+    flex: 1;
+}

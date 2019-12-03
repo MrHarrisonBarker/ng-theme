@@ -83,10 +83,11 @@ export class NgThemeDirective {
         this.el.nativeElement.style.borderColor = this.themeService.currentTheme.hr;
         break;
       } case "OL" : {
-        this.el.nativeElement.style.borderColor = this.themeService.currentTheme.primaryText;
+        this.el.nativeElement.style.color = this.themeService.currentTheme.primaryText;
         break;
       } case "UL" : {
-        this.el.nativeElement.style.borderColor = this.themeService.currentTheme.primaryText;
+        this.el.nativeElement.style.color = this.themeService.currentTheme.primaryText;
+        this.el.nativeElement.style.backgroundColor = this.themeService.currentTheme.primary;
         break;
       }
     }

@@ -4,7 +4,7 @@ import {
 
 export const Themes: Theme[] = [{
   name: 'Light',
-  primary: '#FFFFFF',
+  primary: '#EEEEEE',
   primaryText: '#333333',
   secondary: '#343a40',
   secondaryText: '#343a40',

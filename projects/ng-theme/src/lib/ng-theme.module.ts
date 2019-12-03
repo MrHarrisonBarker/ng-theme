@@ -1,5 +1,5 @@
 import { NgModule, ModuleWithProviders, InjectionToken } from '@angular/core';
-import { NgThemeServiceOptions } from './ng-theme.service';
+import { NgThemeServiceOptions, Background } from './ng-theme.service';
 import { Theme } from './ng-theme';
 
 
@@ -28,7 +28,7 @@ export class NgThemeModule {
 }
 
 export interface NgThemeServiceModuleOptions {
-  testConfig?: string;
+  background?: Background;
   themes?: Theme[];
 }
 
@@ -42,11 +42,11 @@ export interface NgThemeServiceModuleOptions {
 
   if ( options ) {
 
-      if ( typeof( options.testConfig ) === "string" ) {
+      if ( typeof( options.background ) === "object" ) {
 
-          serviceOptions.testConfig = options.testConfig;
+        serviceOptions.background = options.background;
 
-      }
+    }
 
       if ( typeof( options.themes ) === "object" ) {
 
