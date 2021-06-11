@@ -1,5 +1,4 @@
-# ng-theme
-
+# ng-theme (Deprecated!!)
 ![npm](https://img.shields.io/npm/dt/ng-theme) ![npm](https://img.shields.io/npm/v/ng-theme) ![GitHub issues](https://img.shields.io/github/issues/mrharrisonbarker/ng-theme) ![NPM](https://img.shields.io/npm/l/ng-theme) [![Build Status](https://travis-ci.com/MrHarrisonBarker/ng-theme.svg?branch=master)](https://travis-ci.com/MrHarrisonBarker/ng-time-from-pipe) 
 
 Angular theming libary.
